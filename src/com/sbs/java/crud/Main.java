@@ -44,7 +44,7 @@ public class Main {
 			} else if (command.equals("article list")) {
 				if (articles.size() == 0) {
 					System.out.println("게시물이 없습니다.");
-				} else {
+				} else 
 					System.out.printf("번호   |   제목\n");
 					
 					for (int i = articles.size() - 1; i >= 0; i--) {
@@ -53,6 +53,9 @@ public class Main {
 						System.out.printf("%d    |    %s\n", article.id, article.title);
 					}
 				}
+				else {
+					System.out.printf("%s(은)는 존재하지 않는 명령어 입니다.", command);
+				}
 			}
 
 			sc.close();
@@ -60,7 +63,7 @@ public class Main {
 
 		}
 	}
-}
+
 class Article {
 	int id;
 	String title;
